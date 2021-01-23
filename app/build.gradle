@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.bukuku"
+        applicationId 'com.example.bookku'
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
@@ -38,6 +39,7 @@ dependencies {
     implementation 'com.github.barteksc:android-pdf-viewer:3.1.0-beta.1'
     implementation 'androidx.room:room-runtime:2.2.6'
     implementation 'com.github.denzcoskun:ImageSlideshow:0.0.6'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     annotationProcessor 'androidx.room:room-compiler:2.2.6'
 

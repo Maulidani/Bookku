@@ -1,6 +1,7 @@
 package com.example.bookku.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.bookku.R;
+import com.example.bookku.activity.ViewBookActivity;
 import com.example.bookku.model.Result;
 
 import java.util.List;
@@ -38,7 +40,7 @@ public class rvHomeAdapter extends RecyclerView.Adapter<rvHomeAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
 
         final Result result = results.get(position);
         Glide.with(context)
@@ -46,6 +48,14 @@ public class rvHomeAdapter extends RecyclerView.Adapter<rvHomeAdapter.ViewHolder
                 .into(holder.img_cover);
         holder.tv_judul.setText(result.getJudul());
         holder.penulis.setText(result.getPenulis());
+        holder.cv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context, ViewBookActivity.class).putExtra("book", results.get(position).getFile()));
+
+            }
+        });
+
     }
 
     @Override

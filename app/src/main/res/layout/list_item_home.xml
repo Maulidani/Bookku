@@ -3,7 +3,7 @@
     android:id="@+id/cv_home"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="2dp">
+    android:layout_margin="5dp">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -12,8 +12,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="10dp"
             android:id="@+id/img_cover_home"
-            android:layout_width="100dp"
-            android:layout_height="130dp"
+            android:layout_width="130dp"
+            android:layout_height="160dp"
             android:scaleType="fitXY"
             android:src="@mipmap/ic_launcher"/>
         <TextView

@@ -2,41 +2,38 @@ package com.example.bookku.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.widget.SearchView;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.bookku.R;
 import com.example.bookku.activity.BooksActivity;
 import com.example.bookku.activity.SearchActivity;
-import com.example.bookku.adapter.rvAdapter;
 import com.example.bookku.adapter.rvHomeAdapter;
 import com.example.bookku.api.ApiClient;
 import com.example.bookku.api.ApiInterface;
 import com.example.bookku.model.Result;
 import com.example.bookku.model.Value;
 
+import java.net.HttpURLConnection;
 import java.util.ArrayList;
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class HomeFragment extends Fragment {
 
+    TextView lihat_semua;
     RecyclerView rv_home;
     private List<Result> results = new ArrayList<>();
     rvHomeAdapter adapter;
@@ -55,6 +52,13 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         v = view;
+        lihat_semua = v.findViewById(R.id.tv_lihat_semua);
+        lihat_semua.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), BooksActivity.class));
+            }
+        });
         search = view.findViewById(R.id.search);
         search.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,11 +71,11 @@ public class HomeFragment extends Fragment {
         ImageSlider imageSlider = view.findViewById(R.id.slider);
         List<SlideModel> slideModels = new ArrayList<>();
 
-        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img1.jpg", "Judul 1"));
-        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img2.jpg", "Judul 2"));
-        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img3.jpg", "Judul 3"));
-        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img4.jpg", "Judul 4"));
-        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img5.jpg", "Judul 5"));
+        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img1.jpg", ""));
+        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img2.jpg", ""));
+        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img3.jpg", ""));
+        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img4.jpg", ""));
+        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img5.jpg", ""));
         imageSlider.setImageList(slideModels, true);
 
         rv_home = view.findViewById(R.id.rv_home);

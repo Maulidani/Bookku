@@ -53,13 +53,11 @@
             <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/slider"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="180dp"
                 app:auto_cycle="true"
-                app:corner_radius="5"
-                app:delay="0"
-                app:error_image="@drawable/ic_launcher_background"
-                app:period="1000"
-                app:placeholder="@drawable/ic_launcher_background">
+                app:error_image="@android:color/white"
+                app:period="3000"
+                app:placeholder="@android:color/white">
 
             </com.denzcoskun.imageslider.ImageSlider>
 
@@ -126,11 +124,30 @@
             android:layout_marginTop="5dp"
             android:background="@color/bgwhite">
 
+            <TextView
+                android:layout_marginHorizontal="20dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:id="@+id/tv_terbaru"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Terbaru"/>
+            <TextView
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="20dp"
+                android:textSize="12dp"
+                android:textStyle="italic"
+                android:id="@+id/tv_lihat_semua"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Lihat semua"/>
+
             <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv_terbaru"
                 android:layout_width="wrap_content"
                 android:id="@+id/rv_home"
-                android:layout_height="wrap_content"
-                tools:listitem="@layout/list_item_home"/>
+                android:layout_height="wrap_content"/>
 
         </RelativeLayout>
     </LinearLayout>
