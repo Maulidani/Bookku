@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp">
+    <RelativeLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/img_cover"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:layout_marginVertical="5dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/img_cover"
+            android:id="@+id/tv_judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="judul"/>
+        <TextView
+            android:layout_marginHorizontal="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_judul"
+            android:id="@+id/tv_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="deskripsi"
+            android:layout_marginBottom="5dp"/>
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:id="@+id/simpan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bacananti"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:id="@+id/img_cover"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/img_cover"
+            android:gravity="center_horizontal"
+            android:text="judul" />
+
+        <TextView
+            android:id="@+id/tv_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_judul"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/img_cover"
+            android:text="deskripsi" />
+
+        <TextView
+            android:id="@+id/tv_penulis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_toRightOf="@+id/img_cover"
+            android:text="penulis" />
+
+        <ImageView
+            android:id="@+id/hapus"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/delete" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

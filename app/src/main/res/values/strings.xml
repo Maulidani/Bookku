@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Bookku</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="kategori">
+        <item>pendidikan</item>
+        <item>it</item>
+        <item>blabla</item>
+        <item>blabla</item>
+        <item>blabla</item>
+        <item>blabla</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

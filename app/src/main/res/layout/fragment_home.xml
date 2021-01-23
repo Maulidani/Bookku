@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/search"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+           <LinearLayout
+               android:background="@color/bgwhite"
+               android:layout_margin="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <ImageView
+                   android:layout_marginStart="10dp"
+                   android:layout_gravity="center_vertical"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/search"/>
+               <TextView
+                   android:layout_gravity="center_vertical"
+                   android:layout_marginStart="10dp"
+                   android:text="Cari buku ..."
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+           </LinearLayout>
+        </LinearLayout>
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bgwhite">
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:auto_cycle="true"
+                app:corner_radius="5"
+                app:delay="0"
+                app:error_image="@drawable/ic_launcher_background"
+                app:period="1000"
+                app:placeholder="@drawable/ic_launcher_background">
+
+            </com.denzcoskun.imageslider.ImageSlider>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/bgwhite">
+
+            <GridLayout
+                android:id="@+id/grid1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/emot"
+                    android:text="button 1.1" />
+
+
+                <ImageView
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/emot"
+                    android:text="button 1.2" />
+
+                <ImageView
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/emot"
+                    android:text="button 1.3" />
+
+                <ImageView
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/emot"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:text="button 2.1" />
+
+                <ImageView
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/emot"
+                    android:text="button 2.2" />
+
+                <ImageView
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/emot"
+                    android:text="button 2.3" />
+            </GridLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/bgwhite">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:id="@+id/rv_home"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/list_item_home"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
