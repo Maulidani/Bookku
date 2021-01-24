@@ -27,6 +27,7 @@ import com.example.bookku.model.Value;
 import java.net.HttpURLConnection;
 import java.util.ArrayList;
 import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -71,23 +72,21 @@ public class HomeFragment extends Fragment {
         ImageSlider imageSlider = view.findViewById(R.id.slider);
         List<SlideModel> slideModels = new ArrayList<>();
 
-        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img1.jpg", ""));
-        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img2.jpg", ""));
-        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img3.jpg", ""));
-        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img4.jpg", ""));
-        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img5.jpg", ""));
+        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img01.jpg", ""));
+        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img02.jpg", ""));
+        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img03.JPG", ""));
         imageSlider.setImageList(slideModels, true);
 
         rv_home = view.findViewById(R.id.rv_home);
 
-        adapter = new rvHomeAdapter(view.getContext(),results);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(view.getContext(),RecyclerView.HORIZONTAL,false);
+        adapter = new rvHomeAdapter(view.getContext(), results);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(view.getContext(), RecyclerView.HORIZONTAL, false);
         rv_home.setLayoutManager(layoutManager);
         rv_home.setAdapter(adapter);
         lihat();
     }
 
-    void lihat(){
+    void lihat() {
         ApiInterface apiInterface = ApiClient.getRetrofit().create(ApiInterface.class);
         Call<Value> call = apiInterface.lihat();
         call.enqueue(new Callback<Value>() {
@@ -96,9 +95,9 @@ public class HomeFragment extends Fragment {
                 String val = response.body().getValue();
 
 
-                if (val.equals("1")){
+                if (val.equals("1")) {
                     results = response.body().getResult();
-                    adapter = new rvHomeAdapter(v.getContext(),results);
+                    adapter = new rvHomeAdapter(v.getContext(), results);
                     adapter.notifyDataSetChanged();
                     rv_home.setAdapter(adapter);
                     rv_home.setHasFixedSize(true);
