@@ -68,59 +68,6 @@
 
                 </RelativeLayout>
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@color/bgwhite">
-
-                    <GridLayout
-                        android:id="@+id/grid1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true">
-
-                        <ImageView
-                            android:layout_gravity="center"
-                            android:layout_margin="20dp"
-                            android:src="@drawable/emot"
-                            android:text="button 1.1" />
-
-
-                        <ImageView
-                            android:layout_gravity="center"
-                            android:layout_margin="20dp"
-                            android:src="@drawable/emot"
-                            android:text="button 1.2" />
-
-                        <ImageView
-                            android:layout_gravity="center"
-                            android:layout_margin="20dp"
-                            android:src="@drawable/emot"
-                            android:text="button 1.3" />
-
-                        <ImageView
-                            android:layout_row="1"
-                            android:layout_column="0"
-                            android:layout_gravity="center"
-                            android:layout_margin="20dp"
-                            android:src="@drawable/emot"
-                            android:text="button 2.1" />
-
-                        <ImageView
-                            android:layout_gravity="center"
-                            android:layout_margin="20dp"
-                            android:src="@drawable/emot"
-                            android:text="button 2.2" />
-
-                        <ImageView
-                            android:layout_gravity="center"
-                            android:layout_margin="20dp"
-                            android:src="@drawable/emot"
-                            android:text="button 2.3" />
-                    </GridLayout>
-
-                </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
