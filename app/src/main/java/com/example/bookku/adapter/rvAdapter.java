@@ -138,7 +138,7 @@ public class rvAdapter extends RecyclerView.Adapter<rvAdapter.ViewHolder>{
 
             @Override
             protected void onPostExecute(Long aLong) {
-                Toast.makeText(context, "Status Row " + aLong, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Disimpan", Toast.LENGTH_SHORT).show();
             }
         }.execute();
     }
