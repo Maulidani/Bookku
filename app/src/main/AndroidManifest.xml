@@ -12,20 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".activity.SearchActivity" />
-        <activity android:name=".activity.FilsafatdanPsikologi" />
-        <activity android:name=".activity.Agama" />
-        <activity android:name=".activity.Sosial" />
-        <activity android:name=".activity.Bahasa" />
-        <activity android:name=".activity.SainsdanMatematika" />
-        <activity android:name=".activity.Teknologi" />
-        <activity android:name=".activity.SenidanRekreasi" />
-        <activity android:name=".activity.LiteraturdanSastra" />
-        <activity android:name=".activity.SejarahdanGeografi" />
-        <activity android:name=".activity.ViewBookActivity" />
-        <activity android:name=".activity.BooksActivity" />
-        <activity android:name=".activity.SplashScreen">
+        <activity android:name=".MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SearchActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.FilsafatdanPsikologi" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.Agama" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.Sosial" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.Bahasa" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SainsdanMatematika" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.Teknologi" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SenidanRekreasi" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.LiteraturdanSastra" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SejarahdanGeografi" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ViewBookActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.BooksActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SplashScreen" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
