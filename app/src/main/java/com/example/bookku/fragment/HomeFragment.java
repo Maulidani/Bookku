@@ -72,9 +72,11 @@ public class HomeFragment extends Fragment {
         ImageSlider imageSlider = view.findViewById(R.id.slider);
         List<SlideModel> slideModels = new ArrayList<>();
 
-        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img01.jpg", ""));
-        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img02.jpg", ""));
-        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img03.JPG", ""));
+        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img1.jpg", ""));
+        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img2.jpg", ""));
+        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img3.jpg", ""));
+        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img4.jpg", ""));
+        slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img5.jpg", ""));
         imageSlider.setImageList(slideModels, true);
 
         rv_home = view.findViewById(R.id.rv_home);
