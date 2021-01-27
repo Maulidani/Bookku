@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ import com.example.bookku.api.ApiClient;
 import com.example.bookku.api.ApiInterface;
 import com.example.bookku.model.Result;
 import com.example.bookku.model.Value;
+import com.facebook.shimmer.ShimmerFrameLayout;
 
 import java.net.HttpURLConnection;
 import java.util.ArrayList;
@@ -39,7 +41,9 @@ public class HomeFragment extends Fragment {
     private List<Result> results = new ArrayList<>();
     rvHomeAdapter adapter;
     View v;
+    private ShimmerFrameLayout load;
     private LinearLayout search;
+    private FrameLayout frameLayout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -51,8 +55,14 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         v = view;
+
+//        frameLayout = v.findViewById(R.id.frame_fragment);
+//        frameLayout.setVisibility(View.GONE);
+
+        load = v.findViewById(R.id.load);
+        load.startShimmer();
+
         lihat_semua = v.findViewById(R.id.tv_lihat_semua);
         lihat_semua.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,7 +81,6 @@ public class HomeFragment extends Fragment {
 
         ImageSlider imageSlider = view.findViewById(R.id.slider);
         List<SlideModel> slideModels = new ArrayList<>();
-
         slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img1.jpg", ""));
         slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img2.jpg", ""));
         slideModels.add(new SlideModel("http://192.168.43.223/ads/img/img3.jpg", ""));
@@ -95,7 +104,8 @@ public class HomeFragment extends Fragment {
             @Override
             public void onResponse(Call<Value> call, Response<Value> response) {
                 String val = response.body().getValue();
-
+                load.stopShimmer();
+                load.setVisibility(View.GONE);
 
                 if (val.equals("1")) {
                     results = response.body().getResult();
@@ -108,7 +118,8 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onFailure(Call<Value> call, Throwable t) {
-
+                load.stopShimmer();
+                load.setVisibility(View.GONE);
                 Toast.makeText(v.getContext(), "Gagal menghubungi server", Toast.LENGTH_SHORT).show();
 
             }

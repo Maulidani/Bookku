@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#C2185B</color>
     <color name="colorAccent">#7B1FA2</color>
     <color name="bgwhite">#FFFFFF</color>
+    <color name="load">#DDDDDD</color>
+
 </resources>
