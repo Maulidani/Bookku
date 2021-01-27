@@ -7,23 +7,23 @@
     android:layout_height="match_parent"
     tools:context=".fragment.HomeFragment">
 
-    <com.facebook.shimmer.ShimmerFrameLayout
-        android:layout_below="@id/search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/load"
-        app:shimmer_duration="1200">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="?actionBarSize"
-                android:orientation="vertical"/>
-            <include
-                layout="@layout/loading_fragment_home"/>
-        </RelativeLayout>
-    </com.facebook.shimmer.ShimmerFrameLayout>
+<!--    <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--        android:layout_below="@id/search"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/load"-->
+<!--        app:shimmer_duration="1200">-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?actionBarSize"-->
+<!--                android:orientation="vertical"/>-->
+<!--            <include-->
+<!--                layout="@layout/loading_fragment_home"/>-->
+<!--        </RelativeLayout>-->
+<!--    </com.facebook.shimmer.ShimmerFrameLayout>-->
 
     <ScrollView
         android:layout_width="match_parent"

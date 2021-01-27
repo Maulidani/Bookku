@@ -60,8 +60,8 @@ public class HomeFragment extends Fragment {
 //        frameLayout = v.findViewById(R.id.frame_fragment);
 //        frameLayout.setVisibility(View.GONE);
 
-        load = v.findViewById(R.id.load);
-        load.startShimmer();
+//        load = v.findViewById(R.id.load);
+//        load.startShimmer();
 
         lihat_semua = v.findViewById(R.id.tv_lihat_semua);
         lihat_semua.setOnClickListener(new View.OnClickListener() {
@@ -104,8 +104,8 @@ public class HomeFragment extends Fragment {
             @Override
             public void onResponse(Call<Value> call, Response<Value> response) {
                 String val = response.body().getValue();
-                load.stopShimmer();
-                load.setVisibility(View.GONE);
+//                load.stopShimmer();
+//                load.setVisibility(View.GONE);
 
                 if (val.equals("1")) {
                     results = response.body().getResult();
@@ -118,8 +118,8 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onFailure(Call<Value> call, Throwable t) {
-                load.stopShimmer();
-                load.setVisibility(View.GONE);
+//                load.stopShimmer();
+//                load.setVisibility(View.GONE);
                 Toast.makeText(v.getContext(), "Gagal menghubungi server", Toast.LENGTH_SHORT).show();
 
             }
